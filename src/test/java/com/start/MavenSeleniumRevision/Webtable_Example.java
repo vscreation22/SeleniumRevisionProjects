@@ -8,13 +8,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class Webtable_Example {
-
+ 
+	
 	static WebDriver driver;
-
-	public static void main(String[] args) throws InterruptedException {
-
+	@BeforeMethod
+	//public static void main(String[] args) throws InterruptedException {
+	    public void beforeMethod()  
+	    {
 		System.setProperty("webdriver.chrome.driver", "Resource\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
@@ -25,12 +30,14 @@ public class Webtable_Example {
 
 
 
-		Webtable_Example.webtable(); // calling Webtable method
+		//Webtable_Example.webtable(); // calling Webtable method
 
 	}
 
+	@Test
 	public static void webtable() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		WebElement username = driver.findElement(By.id("txtUsername"));
 		username.sendKeys("Admin");
 		WebElement password = driver.findElement(By.id("txtPassword"));
@@ -63,8 +70,12 @@ public class Webtable_Example {
 
 		}
 
+	}  
+	
+	@AfterMethod
+	public void afterMethod() throws InterruptedException {
+
 		Thread.sleep(3000);
 		driver.quit();
-
-	}  
+	}
 }

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="false(failed)">
     <classes>
       <class name="com.start.MavenSeleniumRevision.Webtable_Example">
         <methods>
-          <include name="beforeMethod"/>
           <include name="webtable"/>
           <include name="afterMethod"/>
+          <include name="main"/>
         </methods>
       </class> <!-- com.start.MavenSeleniumRevision.Webtable_Example -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- false(failed) -->
+</suite> <!-- Failed suite [Suite] -->

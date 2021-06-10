@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.start.MavenSeleniumRevision.NewTest">
+      <class name="com.start.MavenSeleniumRevision.Webtable_Example">
         <methods>
           <include name="beforeMethod"/>
+          <include name="webtable"/>
           <include name="afterMethod"/>
-          <include name="f"/>
         </methods>
-      </class> <!-- com.start.MavenSeleniumRevision.NewTest -->
+      </class> <!-- com.start.MavenSeleniumRevision.Webtable_Example -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
